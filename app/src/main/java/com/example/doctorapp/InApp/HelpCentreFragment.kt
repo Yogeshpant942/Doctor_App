@@ -1,0 +1,21 @@
+package com.example.doctorapp.InApp
+
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import com.example.doctorapp.R
+import com.example.doctorapp.databinding.MedicalRecordBinding
+
+
+class HelpCentreFragment : Fragment() {
+    lateinit var binding: MedicalRecordBinding
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_help_centre, container, false)
+    }
+}

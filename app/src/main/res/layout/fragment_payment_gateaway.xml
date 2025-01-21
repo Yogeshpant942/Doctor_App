@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/start_screen_gradient"
+    tools:context=".payment.paymentGateawayFragment">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Doc Connect"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="100dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@drawable/cartoon_image"
+            tools:layout_editor_absoluteX="317dp"
+            tools:layout_editor_absoluteY="7dp" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:text="Check Out"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="29dp"
+        android:text="Total payment of"
+        android:textSize="19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textViewtimepass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:textSize="20dp"
+        android:layout_marginTop="132dp"
+        android:text="$ 20"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- Payment Method Header -->
+    <TextView
+        android:id="@+id/paymentMethodHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Payment method"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewtimepass" />
+
+    <!-- UPI Payment Option -->
+    <LinearLayout
+        android:id="@+id/upiOptionContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/paymentMethodHeader">
+
+        <RadioButton
+            android:id="@+id/upiRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/black"
+            android:text="Pay by any UPI app"
+            android:textSize="16sp"
+            android:textColor="@android:color/black" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/img_28" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/upiDetailsContainer">
+
+            <!-- UPI ID Input -->
+            <EditText
+                android:id="@+id/upiIdInput"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:hint="user@bank"
+                android:textColor="@android:color/black"
+                android:background="@drawable/new_text_bg"
+                android:padding="12dp" />
+
+            <!-- UPI ID Info -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="A UPI ID consists of your user ID and bank handle in the format user@bank."
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Card Payment Option -->
+    <LinearLayout
+        android:id="@+id/cardOptionContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/upiOptionContainer">
+
+        <RadioButton
+            android:id="@+id/cardRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/black"
+            android:text="Credit or debit card"
+            android:textSize="16sp"
+            android:textColor="@android:color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="15dp"
+
+            android:id="@+id/cardDetailsContainer">
+
+            <!-- Card Logos -->
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="18dp"
+                android:src="@drawable/img_29" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="18dp"
+                android:src="@drawable/img_30" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="18dp"
+                android:src="@drawable/img_31" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginStart="32dp">
+
+            <EditText
+
+                android:layout_marginTop="10dp"
+                android:paddingStart="5dp"
+                android:background="@drawable/new_text_bg"
+                android:id="@+id/cardNumberInput"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Card Number"
+                android:inputType="number" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+            <EditText
+                android:paddingStart="5dp"
+                android:background="@drawable/new_text_bg"
+                android:id="@+id/cardExpiryInput"
+                android:layout_width="190dp"
+                android:layout_height="50dp"
+                android:hint="Expiry Date (MM/YY)"
+                android:inputType="text"
+
+                android:layout_marginTop="10dp"
+                />
+
+            <EditText
+                android:paddingStart="5dp"
+                android:id="@+id/cardCVVInput"
+                android:background="@drawable/new_text_bg"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:hint="CVV"
+                android:inputType="numberPassword"
+                android:layout_marginTop="10dp"
+               android:layout_marginStart="10dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="76dp"
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        android:background="@drawable/next_button_bg"
+        android:text="Complete Purchase"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardOptionContainer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

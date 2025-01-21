@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Star Rating Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <!-- Buttons for 1-5 stars -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRate1"
+            android:background="@drawable/heart_shape"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+             />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRate2"
+            android:layout_width="0dp"
+            android:background="@drawable/heart_shape"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+           />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRate3"
+            android:layout_width="0dp"
+            android:background="@drawable/heart_shape"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+           />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRate4"
+            android:background="@drawable/heart_shape"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRate5"
+            android:background="@drawable/heart_shape"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+             />
+    </LinearLayout>
+
+    <!-- Feedback EditText -->
+    <EditText
+        android:id="@+id/etFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Write your feedback here..."
+        android:paddingStart="10dp"
+        android:minHeight="100dp"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:background="@drawable/text_bg"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Submit Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmitFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Feedback"
+        android:background="@drawable/next_button_bg"
+        android:textColor="@android:color/white" />
+</LinearLayout>

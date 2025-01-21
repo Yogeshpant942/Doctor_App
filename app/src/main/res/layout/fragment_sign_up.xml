@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:background="@drawable/start_screen_gradient">
+
+
+<TextView
+    android:id="@+id/textView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="68dp"
+    android:layout_marginTop="104dp"
+    android:text="Join us to start searching"
+    android:textSize="27dp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<TextView
+    android:id="@+id/textView1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="168dp"
+    android:layout_marginTop="20dp"
+    android:text="dkfjsfsdklfs"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+<LinearLayout
+    android:id="@+id/LL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    app:layout_constraintTop_toBottomOf="@+id/textView1"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/googleSignIN"
+
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="60dp"
+        android:background="@drawable/button_bg"
+        android:drawableStart="@drawable/img"
+        android:text="Google"
+        android:elevation="80dp"
+        android:textAllCaps="false"
+        android:textColor="@color/black" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:drawableStart="@drawable/img_1"
+        android:background="@drawable/button_bg"
+        android:text="FaceBook"
+        android:elevation="80dp"
+        android:textAllCaps="false"/>
+</LinearLayout>
+
+<LinearLayout
+    android:layout_marginTop="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@+id/LL"
+    android:orientation="vertical">
+
+
+
+    <EditText
+        android:id="@+id/Name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="40dp"
+        android:background="@drawable/text_bg"
+
+        android:layout_marginTop="20dp"
+        android:hint="Name"
+        android:paddingStart="20sp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="40dp"
+        app:boxStrokeColor="@color/black"
+
+        app:hintTextColor="@color/black"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextLoginEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+
+            android:background="@drawable/text_bg"
+
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="40dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+        app:boxStrokeColor="@color/black"
+        app:endIconMode="password_toggle"
+        app:hintTextColor="@color/black"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextLoginPassword"
+            android:layout_width="match_parent"
+            android:background="@drawable/text_bg"
+            android:layout_height="wrap_content"
+            android:hint="password"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        >
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/Terms_condition"/>
+
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ButtonSignUp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:text="Sign Up"
+        android:textAllCaps="false"
+        android:background="#28C1C4"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/have_account"
+        android:layout_marginLeft="140dp"
+        android:textColor="#28C1C4"
+        android:layout_marginTop="10dp"
+        android:clickable="true"/>
+</LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

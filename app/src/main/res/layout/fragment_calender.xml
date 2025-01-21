@@ -1,0 +1,146 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F9F9F9"
+    android:padding="16dp">
+
+    <!-- Calendar Header -->
+    <TextView
+        android:id="@+id/tvCalendarHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="February 2021"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#3AB69E"
+        android:textColor="#FFFFFF" />
+
+    <!-- CalendarView -->
+    <android.widget.CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp" />
+
+    <!-- Available Time Slots Section -->
+    <TextView
+        android:id="@+id/tvAvailableTimeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Available Time"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp" />
+
+    <GridLayout
+        android:id="@+id/gridTimes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="2"
+        >
+
+        <!-- Example Time Slots -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/timeSlot1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:00 AM"
+            android:background="@drawable/btn_time_slot"
+            android:textColor="#3AB69E" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/timeSlot2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:00 PM"
+            android:background="@drawable/btn_time_slot"
+            android:textColor="#3AB69E" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/timeSlot3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="02:00 PM"
+            android:background="@drawable/btn_time_slot"
+            android:textColor="#3AB69E" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/timeSlot4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="03:00 PM"
+            android:background="@drawable/btn_time_slot"
+            android:textColor="#3AB69E" />
+    </GridLayout>
+
+    <!-- Reminder Section -->
+    <TextView
+        android:id="@+id/tvReminderHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reminder Me Before"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp" />
+
+    <GridLayout
+        android:id="@+id/gridReminder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        >
+
+        <!-- Example Reminder Buttons -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/reminder10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10 Min"
+            android:background="@drawable/btn_time_slot"
+            android:textColor="#3AB69E" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/reminder25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25 Min"
+            android:background="@drawable/btn_time_slot"
+            android:textColor="#3AB69E" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/reminder30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30 Min"
+            android:background="@drawable/btn_time_slot"
+            android:textColor="#3AB69E" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/reminder35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="35 Min"
+            android:background="@drawable/btn_time_slot"
+            android:textColor="#3AB69E" />
+    </GridLayout>
+
+    <!-- Confirm Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm"
+        android:background="@drawable/next_button_bg"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:padding="12dp" />
+</LinearLayout>

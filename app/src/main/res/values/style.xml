@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Circular">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+
+    </style>
+    <style name="CustomRatingBar">
+        <item name="android:progressDrawable">@drawable/small_star_rating</item>
+        <item name="android:layout_width">120dp</item> <!-- Overall width of the stars -->
+        <item name="android:layout_height">20dp</item> <!-- Smaller height -->
+    </style>
+
+</resources>

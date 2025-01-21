@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="4dp"
+    android:layout_margin="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#FFFFFF">
+
+        <!-- Icon -->
+        <ImageView
+            android:id="@+id/ivSuccessIcon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/img_34"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvThankYou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thank You!"
+            android:textSize="38sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/tvAppointmentStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Appointment Successful"
+            android:textSize="20sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Appointment Details -->
+        <TextView
+            android:id="@+id/tvAppointmentDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text"
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Done Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/next_button_bg"
+            android:text="Done"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Edit Appointment -->
+        <TextView
+            android:id="@+id/tvEditAppointment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit your appointment"
+            android:clickable="true"
+            android:textSize="17sp"
+            android:textColor="#007BFF"
+            android:gravity="center"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

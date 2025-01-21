@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/start_screen_gradient"
+  >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/back_button_shape"
+            android:src="@drawable/baseline_arrow_back_ios_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:text="Add Records"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/btnBack"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Profile Image -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardProfileImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+            <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cartoon_image" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Add More Images -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardAddImages"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="#EAF9F3"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintStart_toEndOf="@id/cardProfileImage"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+            <TextView
+                android:id="@+id/addMoreFIleOrimage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Add more\nimages"
+                android:textAlignment="center"
+                android:textColor="#00897B"
+                android:textSize="14sp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Details Section Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDetails"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="26dp"
+            app:cardCornerRadius="30dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="30dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardProfileImage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:shape="oval">
+
+            <!-- Rounded Corners at the Top -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/details_card_top_rounded">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                   >
+
+                    <!-- Record For -->
+                    <TextView
+                        android:id="@+id/tvRecordForLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Record for"
+                        android:textColor="#8E8E93"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+
+                            android:id="@+id/tvRecordForValue"
+                            android:layout_width="200dp"
+                            android:padding="10dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/simple_text_bg"
+                            android:layout_weight="1"
+                            android:hint="Name"
+                            android:textColor="#00897B"
+                            android:textSize="18sp" />
+
+                        <ImageButton
+                            android:id="@+id/btnEditRecordFor"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@null"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/baseline_edit_24" />
+                    </LinearLayout>
+
+                    <!-- Type of Record -->
+                    <TextView
+                        android:id="@+id/tvTypeOfRecordLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Type of record"
+                        android:textColor="#8E8E93"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/btnReport"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@null"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_16" />
+
+                        <ImageButton
+                            android:id="@+id/btnPrescription"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="16dp"
+                            android:background="@null"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_17" />
+
+                        <ImageButton
+                            android:id="@+id/btnInvoice"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="16dp"
+                            android:background="@null"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_18" />
+                    </LinearLayout>
+
+                    <!-- Record Created On -->
+                    <TextView
+                        android:id="@+id/tvRecordCreatedLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Record created on"
+                        android:textColor="#8E8E93"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/tvRecordCreatedValue"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:text="27 Feb, 2021"
+                            android:background="@drawable/simple_text_bg"
+                            android:textColor="#00897B"
+                            android:textSize="18sp" />
+
+                        <ImageButton
+                            android:id="@+id/btnEditRecordCreated"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@null"
+                            android:layout_marginTop="16dp"
+                            android:padding="10dp"
+                            android:src="@drawable/baseline_edit_24" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnUploadRecord"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/next_button_bg"
+                        android:text="Upload record"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

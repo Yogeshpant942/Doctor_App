@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.doctorapp.InApp.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_featureDoctorBookingFragment"
+            app:destination="@id/featureDoctorBookingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_sideWindowFragment"
+            app:destination="@id/sideWindowFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_findDoctorFragment"
+            app:destination="@id/findDoctorFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_popularDoctorFragment"
+            app:destination="@id/popularDoctorFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_differentDoctorFragment"
+            app:destination="@id/differentDoctorFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_featureDoctorBookingFragment2"
+            app:destination="@id/featureDoctorBookingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_self"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_favouriteDoctorFragment"
+            app:destination="@id/favouriteDoctorFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_futureDoctorAppoinementFragment"
+            app:destination="@id/futureDoctorAppoinementFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.example.doctorapp.StartingInterface.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_startScreen1Fragment"
+            app:destination="@id/startScreen1Fragment" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startScreen1Fragment"
+        android:name="com.example.doctorapp.StartingInterface.StartScreen1Fragment"
+        android:label="fragment_start_screen1"
+        tools:layout="@layout/fragment_start_screen1" >
+        <action
+            android:id="@+id/action_startScreen1Fragment_to_startScreen2Fragment"
+            app:destination="@id/startScreen2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startScreen2Fragment"
+        android:name="com.example.doctorapp.StartingInterface.StartScreen2Fragment"
+        android:label="fragment_start_screen2"
+        tools:layout="@layout/fragment_start_screen2" >
+        <action
+            android:id="@+id/action_startScreen2Fragment_to_startScreen3Fragment"
+            app:destination="@id/startScreen3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startScreen3Fragment"
+        android:name="com.example.doctorapp.StartingInterface.StartScreen3Fragment"
+        android:label="fragment_start_screen3"
+        tools:layout="@layout/fragment_start_screen3" >
+        <action
+            android:id="@+id/action_startScreen3Fragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_startScreen3Fragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_startScreen3Fragment_to_homeFragment2"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.doctorapp.StartingInterface.SignUpFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_signUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.doctorapp.StartingInterface.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/featureDoctorBookingFragment"
+        android:name="com.example.doctorapp.InApp.FeatureDoctorBookingFragment"
+        android:label="fragment_feature_doctor_booking"
+        tools:layout="@layout/fragment_feature_doctor_booking" />
+    <fragment
+        android:id="@+id/featuredDoctorAppointmentFragment"
+        android:name="com.example.doctorapp.InApp.FeaturedDoctorAppointmentFragment"
+        android:label="fragment_featured_doctor_appointment"
+        tools:layout="@layout/fragment_featured_doctor_appointment" >
+
+        <action
+            android:id="@+id/action_featuredDoctorAppointmentFragment_to_calenderFragment"
+            app:destination="@id/calenderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sideWindowFragment"
+        android:name="com.example.doctorapp.InApp.SideWindowFragment"
+        android:label="fragment_side_window"
+        tools:layout="@layout/fragment_side_window" >
+        <action
+            android:id="@+id/action_sideWindowFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_sideWindowFragment_to_helpCentreFragment"
+            app:destination="@id/helpCentreFragment" />
+        <action
+            android:id="@+id/action_sideWindowFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/findDoctorFragment"
+        android:name="com.example.doctorapp.FindDoctorFragment"
+        android:label="fragment_find_doctor"
+        tools:layout="@layout/fragment_find_doctor" >
+        <action
+            android:id="@+id/action_findDoctorFragment_to_featureDoctorBookingFragment"
+            app:destination="@id/featureDoctorBookingFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/popularDoctorFragment"
+        android:name="com.example.doctorapp.InApp.PopularDoctorFragment"
+        android:label="fragment_popular_doctor"
+        tools:layout="@layout/fragment_popular_doctor" >
+        <action
+            android:id="@+id/action_popularDoctorFragment_to_featureDoctorBookingFragment"
+            app:destination="@id/featureDoctorBookingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/differentDoctorFragment"
+        android:name="com.example.doctorapp.InApp.DifferentDoctorFragment"
+        android:label="fragment_different_doctor"
+        tools:layout="@layout/fragment_different_doctor" >
+        <action
+            android:id="@+id/action_differentDoctorFragment_to_allDoctorFragment"
+            app:destination="@id/allDoctorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.doctorapp.InApp.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/helpCentreFragment"
+        android:name="com.example.doctorapp.InApp.HelpCentreFragment"
+        android:label="fragment_help_centre"
+        tools:layout="@layout/fragment_help_centre" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.doctorapp.InApp.SettingFragment"
+        android:label="SettingFragment" />
+    <fragment
+        android:id="@+id/allDoctorFragment"
+        android:name="com.example.doctorapp.InApp.AllDoctorFragment"
+        android:label="fragment_all_doctor"
+        tools:layout="@layout/fragment_all_doctor" >
+        <action
+            android:id="@+id/action_allDoctorFragment_to_differentDoctorFragment"
+            app:destination="@id/differentDoctorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentGateawayFragment"
+        android:name="com.example.doctorapp.payment.paymentGateawayFragment"
+        android:label="fragment_payment_gateaway"
+        tools:layout="@layout/fragment_payment_gateaway" >
+        <action
+            android:id="@+id/action_paymentGateawayFragment_to_paymentViaUpiFragment"
+            app:destination="@id/paymentViaUpiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentViaUpiFragment"
+        android:name="com.example.doctorapp.payment.PaymentViaUpiFragment"
+        android:label="fragment_payment_via_upi"
+        tools:layout="@layout/fragment_payment_via_upi" >
+        <action
+            android:id="@+id/action_paymentViaUpiFragment_to_thankYouDialogFragment"
+            app:destination="@id/thankYouDialogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calenderFragment"
+        android:name="com.example.doctorapp.InApp.CalenderFragment"
+        android:label="CalenderFragment" >
+        <action
+            android:id="@+id/action_calenderFragment_to_paymentGateawayFragment"
+            app:destination="@id/paymentGateawayFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/thankYouDialogFragment"
+        android:name="com.example.doctorapp.InApp.ThankYouDialogFragment"
+        android:label="ThankYouDialogFragment" >
+        <action
+            android:id="@+id/action_thankYouDialogFragment_to_rateDoctorFragment"
+            app:destination="@id/rateDoctorFragment" />
+    </dialog>
+    <dialog
+        android:id="@+id/rateDoctorFragment"
+        android:name="com.example.doctorapp.InApp.RateDoctorFragment"
+        android:label="RateDoctorFragment" />
+    <fragment
+        android:id="@+id/favouriteDoctorFragment"
+        android:name="com.example.doctorapp.InApp.FavouriteDoctorFragment"
+        android:label="fragment_favourite_doctor"
+        tools:layout="@layout/fragment_favourite_doctor" />
+    <fragment
+        android:id="@+id/futureDoctorAppoinementFragment"
+        android:name="com.example.doctorapp.InApp.FutureDoctorAppoinementFragment"
+        android:label="fragment_future_doctor_appoinement"
+        tools:layout="@layout/fragment_future_doctor_appoinement" />
+</navigation>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="24dp"
+   >
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="200dp"
+        android:layout_height="10dp"
+        app:cardCornerRadius="14dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="110dp">
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="10dp"
+
+            android:background="#C4C4C9"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter 4 Digits Code"
+        android:textSize="22sp"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter the 4 digits code that you received on your email."
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp">
+
+        <!-- OTP Boxes -->
+        <EditText
+            android:id="@+id/etOtp1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:inputType="number"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textColor="#0EBE7F"
+            android:background="@drawable/new_text_bg"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/etOtp2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:inputType="number"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textColor="#0EBE7F"
+
+            android:background="@drawable/new_text_bg"
+            android:textSize="18sp"
+            android:layout_marginStart="8dp"/>
+
+        <EditText
+            android:id="@+id/etOtp3"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:inputType="number"
+            android:gravity="center"
+            android:textColor="#0EBE7F"
+            android:maxLength="1"
+            android:background="@drawable/new_text_bg"
+            android:textSize="18sp"
+            android:layout_marginStart="8dp"/>
+
+        <EditText
+            android:id="@+id/etOtp4"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:inputType="number"
+            android:gravity="center"
+            android:textColor="#0EBE7F"
+            android:maxLength="1"
+            android:background="@drawable/new_text_bg"
+            android:textSize="18sp"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+android:background="@drawable/next_button_bg"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"/>
+
+</LinearLayout>
