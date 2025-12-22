@@ -31,15 +31,6 @@ Cloud Firestore
 
 Firebase Storage
 
-📂 Project Structure
-app/
-├── ui/               # Activities & Fragments
-├── viewmodel/        # ViewModels
-├── repository/       # Data layer
-├── model/            # Data models
-├── utils/            # Helper classes
-├── res/              # Layouts, drawables
-└── AndroidManifest.xml
 
 ⚙️ Setup Instructions
 
